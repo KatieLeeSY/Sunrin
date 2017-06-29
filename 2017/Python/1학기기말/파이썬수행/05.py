@@ -1,5 +1,5 @@
 def Search(aList, key):
-    for i in range(len(aList):
+    for i in range(len(aList)):
                    if key == aList[i]:
                        return i
     return -1
