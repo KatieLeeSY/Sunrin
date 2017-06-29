@@ -1,6 +1,6 @@
 dogNames = []
 while True:
-    name = input('이름 입력')
+    name = input('이름 입력(종료 시 엔터키): ')
     if name == '':
         break
     dogNames.append(name)
