@@ -1,7 +1,7 @@
 import math
 
 def calCircle(r):
-    #반지름이r인원의넓이와둘레를동시에반환하는함수(area,circum)
+    # 반지름이 r인 원의 넓이와 둘레를 동시에 반환하는 함수(area, circum)
     area = math.pi * r * r
     circum = 2 * math.pi * r
     return(area,circum)
