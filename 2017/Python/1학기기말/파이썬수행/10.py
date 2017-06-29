@@ -15,4 +15,4 @@ for line in f.readlines():
 
     #줄의단어를출력한다.
     for word in words:
-        print(" ",word)
+        print(" ", word)
