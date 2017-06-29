@@ -1,4 +1,4 @@
-fname = input("파일이름: ")
+fname = input("파일 이름: ")
 file = open(fname, "r")
 
 table = dict()
