@@ -7,4 +7,4 @@ while True:
 
 print('참석자들의 이름: ')
 for name in dogNames:
-    print(name, end=", ")
+    print(name, end = ", ")
