@@ -1,4 +1,4 @@
-words = ["cat","mouse","tiger","lion"]
+words = ["cat", "mouse", "tiger", "lion"]
 shortest = word[0]
 for i in range(1, len(words)):
     if len(words[i])<len(shortest):
