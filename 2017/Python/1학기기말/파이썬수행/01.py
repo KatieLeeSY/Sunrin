@@ -1,4 +1,4 @@
-STUDENTS=5
+STUDENTS = 5
 
 scores = []
 scoreSum = 0
