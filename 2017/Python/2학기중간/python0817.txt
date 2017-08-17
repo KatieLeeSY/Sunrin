@@ -9,3 +9,8 @@ pip install django
 
 4. 프로젝트 생성
 django-admin startproject firstproject .
+
+5. 앱 생성
+manage.py startapp firstapp
+
+6. 
