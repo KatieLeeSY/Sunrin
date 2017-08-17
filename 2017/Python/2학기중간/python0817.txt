@@ -1,3 +1,5 @@
+※ 9월 3째주 수행평가
+
 1. 가상환경 설치
 python -m venv test
 
