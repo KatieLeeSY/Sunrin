@@ -25,3 +25,6 @@ Password(8자리이상): [10]
 
 8. 서버 구동
 manage.py runserver
+
+Chrome
+localhost:8000/admin
