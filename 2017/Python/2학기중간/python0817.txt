@@ -41,3 +41,6 @@ http://127.0.0.1:8000/admin
 ex. localhost:8000/root
 
 11. 
+fistproject의 settings.py에 INSTALLED_APP에서 'firstapp'추가해주기
+
+12. 
