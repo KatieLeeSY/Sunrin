@@ -22,3 +22,6 @@ manage.py createsuperuser
 Username: sunrin20506
 Email address: main gmail
 Password(8자리이상): [10]
+
+8. 서버 구동
+manage.py runserver
