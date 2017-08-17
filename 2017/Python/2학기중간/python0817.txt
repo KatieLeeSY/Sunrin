@@ -18,3 +18,7 @@ manage.py migrate
 
 7. 관리자 계정 생성
 manage.py createsuperuser
+
+Username: sunrin20506
+Email address: main gmail
+Password(8자리이상): [10]
