@@ -1,8 +1,11 @@
-1. °¡»óÈ¯°æ ¼³Ä¡
+1. ê°€ìƒí™˜ê²½ ì„¤ì¹˜
 python -m venv test
 
-2. °¡»óÈ¯°æ ±¸µ¿
+2. ê°€ìƒí™˜ê²½ êµ¬ë™
 test\Scripts\activate
 
-3. django ¼³Ä¡
+3. django ì„¤ì¹˜
 pip install django
+
+4. í”„ë¡œì íŠ¸ ìƒì„±
+django-admin startproject firstproject .
