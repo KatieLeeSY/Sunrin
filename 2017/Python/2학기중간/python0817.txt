@@ -40,7 +40,12 @@ http://127.0.0.1:8000/admin
 * firstproject의 urls.py로 사이트어드민 바꿀수있음.
 ex. localhost:8000/root
 
-11. 
-fistproject의 settings.py에 INSTALLED_APP에서 'firstapp'추가해주기
+11. 환경설정(settings.py)
+fistproject의 settings.py
+INSTALLED_APP에서 'firstapp'추가해주기
+LANGUAGE_CODE = 'ko'
+TIME_ZONE = 'Asia/Seoul'
 
-12. 
+12. 정적 파일 경로 지정
+STATIC_URL = '/static/'
+STATIC_ROOT=os.path.join(BASE_DIR, 'static')
