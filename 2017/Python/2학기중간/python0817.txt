@@ -28,3 +28,7 @@ manage.py runserver
 
 Chrome
 localhost:8000/admin
+
+http://127
+
+각각의 파일들이 무슨 의미인지 시험 
