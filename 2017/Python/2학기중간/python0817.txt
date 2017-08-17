@@ -29,15 +29,15 @@ manage.py runserver
 Chrome
 localhost:8000/admin
 
-각각의 파일들이 무슨 의미인지 시험 
-
-firstproject의 url로 사이트어드민 바꿀수있음.
-ex. localhost:8000/root
-
 9. 페이지 접속
 http://127.0.0.1:8000
 
 10. 관리자 페이지 접속
 http://127.0.0.1:8000/admin
+
+* 각각의 파일들이 무슨 의미인지 시험 
+
+* firstproject의 urls.py로 사이트어드민 바꿀수있음.
+ex. localhost:8000/root
 
 11. 
