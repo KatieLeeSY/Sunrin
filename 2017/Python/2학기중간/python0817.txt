@@ -15,3 +15,6 @@ manage.py startapp firstapp
 
 6. DB 반영
 manage.py migrate
+
+7. 관리자 계정 생성
+manage.py createsuperuser
