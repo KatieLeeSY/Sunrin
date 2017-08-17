@@ -13,4 +13,5 @@ django-admin startproject firstproject .
 5. 앱 생성
 manage.py startapp firstapp
 
-6. 
+6. DB 반영
+manage.py migrate
