@@ -1,0 +1,80 @@
+package java20170822;
+
+import java.util.Scanner;
+
+public class ReplaceString {
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("** 프로그래밍 시작 **");
+		System.out.print("입력하세요: ");
+		String inputS = sc.nextLine();
+		
+		StringBuffer inputSB = new StringBuffer(inputS);
+		
+		while(true) {
+			System.out.print("명령: ");
+			String command = sc.nextLine();
+			int size = command.length();		//	command 길이
+			int beforeStart = 0, beforeEnd = 0;		//	수정 전 문자위치시작, 수정 전 문자위치끝
+			String replacement = "";		// 수정 후 문자
+			
+			/*
+			String array[] = command.split("!");
+			if(command == "그만")	 {
+				System.out.println("끝");//	예외처리(그만)
+				break;
+			}
+			else if(command.indexOf("!") == 0){
+				System.out.println("잘못된 명령");
+			}
+			//love!LOVE
+			else if(!inputS.contains(array[0])){
+				System.out.println("찾을 수 없습니다.");
+			}
+			else {
+				int index = inputSB.indexOf(array[0]);
+				inputSB.replace(index, index+array[0].length(), array[1]);
+				System.out.println(inputSB);
+			}
+			*/
+			
+			int op = 0, errorCheck = 0;	//	'!' 찾기
+			
+			for(int i=0;i<size;i++) {	//	'!' 찾는중
+				if(command.charAt(i)=='!') {
+					op = i;
+					errorCheck++;
+				}
+			}
+			
+			if(op==0 || errorCheck!=1 || op==size) {	//	예외처리(!없을때, 개수초과), !ㅁ, ㅁ!
+				System.out.println("잘못된 명령입니다!");
+				continue;
+			} else {
+				for(int i=0;i<op;i++) {			//	수정 전 문자 위치 찾기
+					if(inputSB.charAt(i)==command.charAt(0))	//	수정 전 문자위치시작
+						beforeStart = i;
+					else if(inputSB.charAt(i)==command.charAt(op-1))	//	수정 전 문자위치끝
+						beforeEnd = i;
+					}
+				
+				if(beforeEnd == 0) {		//	예외처리(찾을 수 없음)
+					System.out.println("찾을 수 없습니다!");
+					continue;
+				}
+				
+				for(int i=op+1;i<size;i++) {	//	수정 후 문자
+					replacement += command.charAt(i);
+				}
+				
+				inputSB.replace(beforeStart, beforeEnd+1, replacement);
+				System.out.println(inputSB);
+			}
+			//love!LOVE
+		}	//	end of while
+
+	}	//	end of main
+
+}
