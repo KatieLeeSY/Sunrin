@@ -20,6 +20,7 @@ public class ReplaceString {
 			int beforeStart = 0, beforeEnd = 0;		//	수정 전 문자위치시작, 수정 전 문자위치끝
 			String replacement = "";		// 수정 후 문자
 			
+			// 의수코드
 			/*
 			String array[] = command.split("!");
 			if(command == "그만")	 {
@@ -29,7 +30,6 @@ public class ReplaceString {
 			else if(command.indexOf("!") == 0){
 				System.out.println("잘못된 명령");
 			}
-			//love!LOVE
 			else if(!inputS.contains(array[0])){
 				System.out.println("찾을 수 없습니다.");
 			}
@@ -40,6 +40,7 @@ public class ReplaceString {
 			}
 			*/
 			
+			// 내 코드
 			int op = 0, errorCheck = 0;	//	'!' 찾기
 			
 			for(int i=0;i<size;i++) {	//	'!' 찾는중
