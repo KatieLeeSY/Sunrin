@@ -72,7 +72,7 @@ public class ReplaceString {
 				inputSB.replace(beforeStart, beforeEnd+1, replacement);
 				System.out.println(inputSB);
 			}
-			//love!LOVE
+			
 		}	//	end of while
 
 	}	//	end of main
