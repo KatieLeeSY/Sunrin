@@ -51,3 +51,15 @@ TIME_ZONE = 'Asia/Seoul'
 12. 정적 파일 경로 지정
 STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
+
+13. models.py 클래스 생성
+
+14. (앱) DB 파일 생성
+python manage.py makemigrations firstapp
+
+15. DB 반영
+python manage.py migrate firstapp
+
+16. 관리자 페이지 포스팅
+
+16_1 : 관리자 페이지 (클래스 인식)
