@@ -53,6 +53,10 @@ STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
 13. models.py 클래스 생성
+from django.db import models
+
+# Create your models here.
+
 from django.utils import timezone
 
 class Post(models.Model):
@@ -70,6 +74,7 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
 
 14. (앱) DB 파일 생성
 manage.py makemigrations firstapp
