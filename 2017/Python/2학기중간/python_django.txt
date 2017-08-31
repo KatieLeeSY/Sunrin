@@ -126,6 +126,12 @@ from firstapp.models import Post
 Post.objects.all()
 
 17_2. 객체 생성하기
-Post.objects.create(author=me, title='test2', text='test2')
 사용자 확인
 from django.contrib.auth.models import User
+누가 어떤글을 썼는지 확인
+User.objects.all()
+내가 이 사람이다
+me = User.objects.get(username='sunrin20506')
+객체 생성
+Post.objects.create(author=me, title='test2', text='test2')
+
