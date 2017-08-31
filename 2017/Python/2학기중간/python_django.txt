@@ -107,7 +107,6 @@ admin.site.register(Student)
 
 # Register your models here.
 
-
 14. (앱) DB 파일 생성
 manage.py makemigrations firstapp
 
@@ -128,10 +127,14 @@ Post.objects.all()
 17_2. 객체 생성하기
 사용자 확인
 from django.contrib.auth.models import User
-누가 어떤글을 썼는지 확인
 User.objects.all()
 내가 이 사람이다
 me = User.objects.get(username='sunrin20506')
 객체 생성
 Post.objects.create(author=me, title='test2', text='test2')
 
+17_3. 조회
+내가 쓴거만 나오게 => (author=?)
+Post.objects.filter(author=me)
+제목에 검색어 => (title_contains='')
+Post.objects.filter(title_contains='te')
