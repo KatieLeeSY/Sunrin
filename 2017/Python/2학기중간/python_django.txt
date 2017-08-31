@@ -139,9 +139,8 @@ Post.objects.filter(author=me)
 글자 검색 (언더바2개!!)
 Post.objects.filter(title__contains='te')
 시간 검색
-from.django.utils import timezone
-Post.objects.filter(created_date=timezone.now())
-
-post=Post.objects.get(title='test2')
-post.publish()
-Post.objects.filter(published_date__lte=timezone.now())
+1) from.django.utils import timezone
+2) Post.objects.filter(created_date=timezone.now())
+3) post=Post.objects.get(title='test2')
+4) post.publish()
+5) Post.objects.filter(published_date__lte=timezone.now())
