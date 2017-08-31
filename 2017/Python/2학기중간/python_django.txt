@@ -138,5 +138,6 @@ Post.objects.create(author=me, title='test2', text='test2')
 Post.objects.filter(author=me)
 글자 검색
 Post.objects.filter(title__contains='te')
-
-Post.objects.filter(create_date=timezone.now())
+시간 검색
+from.django.utils import timezone
+Post.objects.filter(created_date=timezone.now())
