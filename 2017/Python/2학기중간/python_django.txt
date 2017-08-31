@@ -133,8 +133,8 @@ me = User.objects.get(username='sunrin20506')
 객체 생성
 Post.objects.create(author=me, title='test2', text='test2')
 
-17_3. 조회
-내가 쓴거만 나오게 => (author=?)
+17_3. 객체 조회하기(조건)
+특정 사용자
 Post.objects.filter(author=me)
-제목에 검색어 => (title__contains='')
+글자 검색
 Post.objects.filter(title__contains='te')
