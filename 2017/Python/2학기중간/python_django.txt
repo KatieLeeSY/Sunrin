@@ -136,5 +136,5 @@ Post.objects.create(author=me, title='test2', text='test2')
 17_3. 조회
 내가 쓴거만 나오게 => (author=?)
 Post.objects.filter(author=me)
-제목에 검색어 => (title_contains='')
-Post.objects.filter(title_contains='te')
+제목에 검색어 => (title__contains='')
+Post.objects.filter(title__contains='te')
