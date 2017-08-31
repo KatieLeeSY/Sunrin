@@ -141,3 +141,7 @@ Post.objects.filter(title__contains='te')
 시간 검색
 from.django.utils import timezone
 Post.objects.filter(created_date=timezone.now())
+
+post=Post.objects.get(title='test2')
+post.publish()
+Post.objects.filter(published_date=timezone.now())
