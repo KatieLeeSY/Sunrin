@@ -53,6 +53,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT=os.path.join(BASE_DIR, 'static')
 
 13. models.py 클래스 생성
+[firstapp > models]
 from django.db import models
 
 # Create your models here.
@@ -74,6 +75,37 @@ class Post(models.Model):
 
     def __str__(self):
         return self.title
+
+class Student(models.Model):
+    FRESHMAN = 'FR'
+    SOPHOMORE = 'SO'
+    JUNIOR = 'JR'
+    SENIOR = 'SR'
+    YEAR_IN_SCHOOL_CHOICES = (
+        (FRESHMAN, 'Freshman'),
+        (SOPHOMORE, 'Sophomore'),
+        (JUNIOR, 'Junior'),
+        (SENIOR, 'Senior'),
+    )
+    year_in_school = models.CharField(
+        max_length=2,
+        choices=YEAR_IN_SCHOOL_CHOICES,
+        default=FRESHMAN,
+    )
+
+    def is_upperclass(self):
+        return self.year_in_school in (self.JUNIOR, self.SENIOR)
+
+
+[firstapp > admin]
+from django.contrib import admin
+from .models import Post
+from .models import Student
+
+admin.site.register(Post)
+admin.site.register(Student)
+
+# Register your models here.
 
 
 14. (앱) DB 파일 생성
