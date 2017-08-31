@@ -125,4 +125,7 @@ manage.py shell
 from firstapp.models import Post
 Post.objects.all()
 
-
+17_2. 객체 생성하기
+Post.objects.create(author=me, title='test2', text='test2')
+사용자 확인
+from django.contrib.auth.models import User
