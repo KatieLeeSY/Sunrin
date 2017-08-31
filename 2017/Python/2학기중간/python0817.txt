@@ -85,3 +85,12 @@ manage.py migrate firstapp
 16. 관리자 페이지 포스팅
 
 16_1 : 관리자 페이지 (클래스 인식)
+
+17. 장고 shell 명령
+manage.py shell
+
+17_1. 객체 조회하기 
+from firstapp.models import Post
+Post.objects.all()
+
+
