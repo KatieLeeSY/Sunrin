@@ -144,4 +144,4 @@ Post.objects.filter(created_date=timezone.now())
 
 post=Post.objects.get(title='test2')
 post.publish()
-Post.objects.filter(published__date__lte=timezone.now())
+Post.objects.filter(published_date__lte=timezone.now())
