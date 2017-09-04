@@ -1,0 +1,4 @@
+https://unity3d.com/kr/learn/tutorials/projects/2d-ufo-tutorial
+
+총 9강 중 1~4강 진행
+* D드라이브에 저장 필수(다음시간에 이어서 사용)
