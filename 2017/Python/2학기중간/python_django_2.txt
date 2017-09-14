@@ -1,9 +1,17 @@
-test -> °¡»óÈ¯°æ, ±¸µ¿È¯°æ
-±¸µ¿È¯°æ
+test -> ê°€ìƒí™˜ê²½, êµ¬ë™í™˜ê²½
+êµ¬ë™í™˜ê²½
 python -m venv test
 from firstapp.models import Post
 Post.object.all()
 
-firstapp -> ¾Û, ÇÏ³ªÀÇ ¸ğµâ ´ÜÀ§
-ex. 5°³ÀÇ °Ô½ÃÆÇ: 5°³ÀÇ ¾Û
-¼Ò¸Ş´º 5°³: 5°³ÀÇ ¾Û
+firstapp -> ì•±, í•˜ë‚˜ì˜ ëª¨ë“ˆ ë‹¨ìœ„
+ex. 5ê°œì˜ ê²Œì‹œíŒ: 5ê°œì˜ ì•±
+ì†Œë©”ë‰´ 5ê°œ: 5ê°œì˜ ì•±
+
+cd ..
+d:
+test\Scripts\activate
+manage.py shell
+from firstapp.models import Post
+Post.objects.all()
+Post.objects.create(author=me, title='title test', text='text test')
