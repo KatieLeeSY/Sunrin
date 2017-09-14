@@ -14,4 +14,7 @@ test\Scripts\activate
 manage.py shell
 from firstapp.models import Post
 Post.objects.all()
+from django.contrib.auth.models import User
+User.objects.all()
+me=User.objects.get(username='sunrin20506')
 Post.objects.create(author=me, title='title test', text='text test')
