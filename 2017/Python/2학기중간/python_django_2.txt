@@ -24,3 +24,4 @@ Post.objects.create(author=me, title='title test', text='text test')
 
 ## filter 쓰기
 Post.objects.filter(author=me)
+Post.objects.filter(title__contains='test')
