@@ -1,0 +1,9 @@
+test -> 가상환경, 구동환경
+구동환경
+python -m venv test
+from firstapp.models import Post
+Post.object.all()
+
+firstapp -> 앱, 하나의 모듈 단위
+ex. 5개의 게시판: 5개의 앱
+소메뉴 5개: 5개의 앱
