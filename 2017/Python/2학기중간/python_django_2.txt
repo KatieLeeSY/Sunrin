@@ -22,6 +22,19 @@ User.objects.all()
 me=User.objects.get(username='sunrin20506')
 Post.objects.create(author=me, title='title test', text='text test')
 
-## filter 쓰기
+## filter 쓰기 (author, title)
 Post.objects.filter(author=me)
 Post.objects.filter(title__contains='test')
+Post.objects.filter(title__contains='t')
+Post.objects.filter(title__contains='app')
+
+## 시간과 관련된 함수 쓰기
+from django.utils import timezone
+Post.objects.filter(published_date__lte=timezone.now())
+
+post=Post.objects.get(title='title test')
+post.publish()
+Post.objects.filter(published_date__lte=timezone.now())
+
+## 정렬하기
+Post.objects.order_by('created_date')
