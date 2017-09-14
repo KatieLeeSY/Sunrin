@@ -44,4 +44,4 @@ Post.objects.order_by('-created_date')
 현재시간기준
 Post.objects.filter(published_date__lte=timezone.now()).order_by('created_date')
 
-환경구축(가상환경구축, 장고설치, 세팅파이) 기본프로젝트파일생성 기본앱생성 - 서버구동 - 
+환경구축(가상환경구축, 장고설치, 세팅파이) 기본프로젝트파일생성 기본앱생성 - 서버구동 - 어드민페이지 - 클래스(모델스 파이) - 어드민페이지에서 확인 - 클래스 추가(스튜던트)
