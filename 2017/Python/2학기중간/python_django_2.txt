@@ -37,4 +37,9 @@ post.publish()
 Post.objects.filter(published_date__lte=timezone.now())
 
 ## 정렬하기
+오름차순
 Post.objects.order_by('created_date')
+내림차순
+Post.objects.order_by('-created_date')
+현재시간기준
+Post.objects.filter(published_date__lte=timezone.now()).order_by('created_date')
