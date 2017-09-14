@@ -10,6 +10,7 @@ firstapp -> 앱, 하나의 모듈 단위
 ex. 5개의 게시판: 5개의 앱
 소메뉴 5개: 5개의 앱
 
+## 환경변수 변경 후
 cd ..
 d:
 test\Scripts\activate
@@ -20,3 +21,6 @@ from django.contrib.auth.models import User
 User.objects.all()
 me=User.objects.get(username='sunrin20506')
 Post.objects.create(author=me, title='title test', text='text test')
+
+## filter 쓰기
+Post.objects.filter(author=me)
