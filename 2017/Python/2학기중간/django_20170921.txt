@@ -39,4 +39,23 @@ post.Post.objects.get(title="이름")
 ---------------------------------------------------
 
 views.py(일꾼) VS urls.py(주문하는 사람) VS templates(매대,진열대,판매대)
+//firstapp\urls.py
+from django.conf.urls import url, include
+from django.contrib import admin
+
+urlpatterns = [
+    url(r'^$', views.post_list, name='post_list'),
+    
+]
+
+//view.py
+from django.shortcuts import render
+
+def post_list(request):
+    return render(request, 'firstapp/home.html')
+
+# Create your views here.
+
+//template파일경로
+firstapp\templates\firstapp\home.html
 
