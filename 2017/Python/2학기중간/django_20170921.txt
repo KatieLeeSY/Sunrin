@@ -1,0 +1,25 @@
+1. 객체 조회하기 (from 앱이름.models import 클래스명)
+from firstapp.models import Post
+클래스명.objects.all()
+
+2. 객체 생성하기 (사용자 정보)
+from django.contrib.auth.models import User
+클래스명.objects.create(속성1='값', 속성2='값'...)
+
+3. 객체 조회하기_1 (필터링)
+클래스명.objects.filter(title__contains='검색어')
+//문자열 contatins
+클래스명.objects.filter(속성__lte = timezone.now())
+
+4. 객체 조회하기_2 (정렬)
+//오름차순
+클래스명.objects.order_by(속성)
+//내림차순
+클래스명.objects.order_by(-속성)
+
+5. 객체 삭제하기
+클래스명.objects.delete(객체 명)
+
+6. 메소드 사용하기
+객체.메소드()
+post.
