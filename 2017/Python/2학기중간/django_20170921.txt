@@ -59,3 +59,18 @@ def post_list(request):
 //template파일경로
 firstapp\templates\firstapp\home.html
 
+//home.html
+<html>
+<body>
+
+Hello Django <br>
+템플릿태그->이중괄호 <br>
+{{posts}} <br>
+{% for post in posts %}
+<p>publish:{{post.published_date}}</p>
+<p>{{post.title}}</p>
+<p>{{post.text}}</p>
+{%endfor%}
+
+</body>
+</html>
