@@ -37,4 +37,5 @@ from django.utils import timezone
 post.publish()
 post.Post.objects.get(title="이름")
 ---------------------------------------------------
-views.py VS urls.py
+views.py(일꾼) VS urls.py(주문하는 사람) VS templates(매대,진열대,판매대)
+
