@@ -1,4 +1,8 @@
 1차시: 장고환경구축(가상환경구축-장고설치-프로젝트생성-앱생성-DB생성-DB반영-서버구동)
+python -m venv 가상환경
+pip install django
+django-admin startproject 프로젝트명 .
+manage.py startapp 
 
 1. 객체 조회하기 (from 앱이름.models import 클래스명)
 from firstapp.models import Post
