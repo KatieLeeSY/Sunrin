@@ -2,7 +2,12 @@
 python -m venv 가상환경
 pip install django
 django-admin startproject 프로젝트명 .
-manage.py startapp 
+manage.py startapp 앱이름
+---------------------------------------------------
+1. 클래스생성
+models.py
+2. 클래스를 관리자페이지 등록
+---------------------------------------------------
 
 1. 객체 조회하기 (from 앱이름.models import 클래스명)
 from firstapp.models import Post
@@ -30,4 +35,5 @@ from django.utils import timezone
 6. 메소드 사용하기
 객체.메소드()
 post.publish()
-post.
+post.Post.objects.get(title="이름")
+---------------------------------------------------
