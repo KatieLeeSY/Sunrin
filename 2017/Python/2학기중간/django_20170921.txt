@@ -68,7 +68,7 @@ Hello Django <br>
 {{posts}} <br>
 {% for post in posts %}
 <p>publish:{{post.published_date}}</p>
-<p>{{post.title}}</p>
+<h1><p>{{post.title}}</p></h1>
 <p>{{post.text}}</p>
 {%endfor%}
 
