@@ -64,7 +64,9 @@ firstapp\templates\firstapp\home.html
 <body>
 
 Hello Django <br>
-템플릿태그->이중괄호 <br>
+
+<!--템플릿태그->이중괄호-->
+
 {{posts}} <br>
 {% for post in posts %}
 <p>publish:{{post.published_date}}</p>
