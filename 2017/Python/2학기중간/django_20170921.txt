@@ -37,3 +37,4 @@ from django.utils import timezone
 post.publish()
 post.Post.objects.get(title="이름")
 ---------------------------------------------------
+views.py VS urls.py
