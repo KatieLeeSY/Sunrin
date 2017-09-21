@@ -1,25 +1,29 @@
-1. °´Ã¼ Á¶È¸ÇÏ±â (from ¾ÛÀÌ¸§.models import Å¬·¡½º¸í)
+1ì°¨ì‹œ: ì¥ê³ í™˜ê²½êµ¬ì¶•(ê°€ìƒí™˜ê²½êµ¬ì¶•-ì¥ê³ ì„¤ì¹˜-í”„ë¡œì íŠ¸ìƒì„±-ì•±ìƒì„±-DBìƒì„±-DBë°˜ì˜-ì„œë²„êµ¬ë™)
+
+1. ê°ì²´ ì¡°íšŒí•˜ê¸° (from ì•±ì´ë¦„.models import í´ë˜ìŠ¤ëª…)
 from firstapp.models import Post
-Å¬·¡½º¸í.objects.all()
+í´ë˜ìŠ¤ëª….objects.all()
 
-2. °´Ã¼ »ı¼ºÇÏ±â (»ç¿ëÀÚ Á¤º¸)
+2. ê°ì²´ ìƒì„±í•˜ê¸° (ì‚¬ìš©ì ì •ë³´)
 from django.contrib.auth.models import User
-Å¬·¡½º¸í.objects.create(¼Ó¼º1='°ª', ¼Ó¼º2='°ª'...)
+í´ë˜ìŠ¤ëª….objects.create(ì†ì„±1='ê°’', ì†ì„±2='ê°’'...)
 
-3. °´Ã¼ Á¶È¸ÇÏ±â_1 (ÇÊÅÍ¸µ)
-Å¬·¡½º¸í.objects.filter(title__contains='°Ë»ö¾î')
-//¹®ÀÚ¿­ contatins
-Å¬·¡½º¸í.objects.filter(¼Ó¼º__lte = timezone.now())
+3. ê°ì²´ ì¡°íšŒí•˜ê¸°_1 (í•„í„°ë§)
+from django.utils import timezone
+í´ë˜ìŠ¤ëª….objects.filter(title__contains='ê²€ìƒ‰ì–´')
+//ë¬¸ìì—´ contatins
+í´ë˜ìŠ¤ëª….objects.filter(ì†ì„±__lte = timezone.now())
 
-4. °´Ã¼ Á¶È¸ÇÏ±â_2 (Á¤·Ä)
-//¿À¸§Â÷¼ø
-Å¬·¡½º¸í.objects.order_by(¼Ó¼º)
-//³»¸²Â÷¼ø
-Å¬·¡½º¸í.objects.order_by(-¼Ó¼º)
+4. ê°ì²´ ì¡°íšŒí•˜ê¸°_2 (ì •ë ¬)
+//ì˜¤ë¦„ì°¨ìˆœ
+í´ë˜ìŠ¤ëª….objects.order_by(ì†ì„±)
+//ë‚´ë¦¼ì°¨ìˆœ
+í´ë˜ìŠ¤ëª….objects.order_by(-ì†ì„±)
 
-5. °´Ã¼ »èÁ¦ÇÏ±â
-Å¬·¡½º¸í.objects.delete(°´Ã¼ ¸í)
+5. ê°ì²´ ì‚­ì œí•˜ê¸°
+í´ë˜ìŠ¤ëª….objects.delete(ê°ì²´ ëª…)
 
-6. ¸Ş¼Òµå »ç¿ëÇÏ±â
-°´Ã¼.¸Ş¼Òµå()
+6. ë©”ì†Œë“œ ì‚¬ìš©í•˜ê¸°
+ê°ì²´.ë©”ì†Œë“œ()
+post.publish()
 post.
