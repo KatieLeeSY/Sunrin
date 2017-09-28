@@ -1,0 +1,112 @@
+1. 가상환경 구축 및 실행
+★ python -m venv test
+
+
+2. 장고 설치 or 실행
+pip install django
+★ test\Scripts\activate
+
+
+3. 프로젝트 생성, 앱생성
+django-admin startproject sec .
+manage.py startapp secapp
+
+
+4. DB생성
+manage.py migrate
+manage.py makemigrations app
+
+
+5. 환경설정
+[sec] - [settings]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+
+
+6. 서버 구동
+★ manage.py runserver
+
+
+7. 관리자 페이지 이동, 계정 생성
+localhost:8000/admin
+
+★ ctrl + c 빠져나오기
+manage.py createsuperuser
+admin
+admin@gmail.com
+at least 8 characters : pass1234
+
+
+8. 모델 생성(클래스 생성)
+[secapp\models.py]
+생성
+
+[sec\settings.py]
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    ★ 'secapp',
+]
+class 만듬과 동시에 db파일 생성, 반영
+
+
+8_1. 생성된 모델을 관리자 페이지에 반영
+[app\admin.py]
+from django.contrib import admin
+from .models import Post
+from .models import Student
+
+admin.site.register(Post)
+admin.site.register(Student)
+
+# Register your models here.
+
+
+9. DB생성 및 반영
+생성: manage.py makemigrations app
+반영: manage.py migrate
+
+
+10. 템플릿 출력(hello django 출력)
+[sec\urls]
+from django.conf.urls import url, include
+url(r'',include('secapp.urls')),
+
+
+10_1. 템플릿 생성(html)
+[D:\20506_이서영\Python\second\secapp\templates\secapp\home.html 생성]
+
+10_2. url 생성
+[app\urls 생성]
+// . -> 현재 위치
+from django.conf.urls import url
+from . import views
+urlpattern = [
+	url(r'^$', views.post_list, name='post_list'),
+]
+
+
+10_3. view로 처리
+
+
+11. 서버 데이터를 템플릿 출력 (템플릿 변수, 템플릿 코드)
+템플릿 변수: {{}}
+템플릿 코드: {% for in %} {%endfor%}
+
+11_1. views 데이터를 가공
+[D:\20506_이서영\Python\second\secapp\views.py]
+from django.shortcuts import render
+from .models import Post
+
+# Create your views here.
+def post_list(request):
+    posts=Post.objects.all() #서버 데이터를 전송
+    return render(request, 'app/home.html',
+                  {'posts':posts})
+
+
+11_2. 템플릿에서 출력
