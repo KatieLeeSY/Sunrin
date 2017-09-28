@@ -1,44 +1,44 @@
-1. °¡»óÈ¯°æ ±¸Ãà ¹× ½ÇÇà
-¡Ú python -m venv test
+1. ê°€ìƒí™˜ê²½ êµ¬ì¶• ë° ì‹¤í–‰
+â˜… python -m venv test
 
 
-2. Àå°í ¼³Ä¡ or ½ÇÇà
+2. ì¥ê³  ì„¤ì¹˜ or ì‹¤í–‰
 pip install django
-¡Ú test\Scripts\activate
+â˜… test\Scripts\activate
 
 
-3. ÇÁ·ÎÁ§Æ® »ı¼º, ¾Û»ı¼º
+3. í”„ë¡œì íŠ¸ ìƒì„±, ì•±ìƒì„±
 django-admin startproject sec .
 manage.py startapp secapp
 
 
-4. DB»ı¼º
+4. DBìƒì„±
 manage.py migrate
 manage.py makemigrations app
 
 
-5. È¯°æ¼³Á¤
+5. í™˜ê²½ì„¤ì •
 [sec] - [settings]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 
-6. ¼­¹ö ±¸µ¿
-¡Ú manage.py runserver
+6. ì„œë²„ êµ¬ë™
+â˜… manage.py runserver
 
 
-7. °ü¸®ÀÚ ÆäÀÌÁö ÀÌµ¿, °èÁ¤ »ı¼º
+7. ê´€ë¦¬ì í˜ì´ì§€ ì´ë™, ê³„ì • ìƒì„±
 localhost:8000/admin
 
-¡Ú ctrl + c ºüÁ®³ª¿À±â
+â˜… ctrl + c ë¹ ì ¸ë‚˜ì˜¤ê¸°
 manage.py createsuperuser
 admin
 admin@gmail.com
 at least 8 characters : pass1234
 
 
-8. ¸ğµ¨ »ı¼º(Å¬·¡½º »ı¼º)
+8. ëª¨ë¸ ìƒì„±(í´ë˜ìŠ¤ ìƒì„±)
 [secapp\models.py]
-»ı¼º
+ìƒì„±
 
 [sec\settings.py]
 
@@ -49,12 +49,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    ¡Ú 'secapp',
+    â˜… 'secapp',
 ]
-class ¸¸µë°ú µ¿½Ã¿¡ dbÆÄÀÏ »ı¼º, ¹İ¿µ
+class ë§Œë“¬ê³¼ ë™ì‹œì— dbíŒŒì¼ ìƒì„±, ë°˜ì˜
 
 
-8_1. »ı¼ºµÈ ¸ğµ¨À» °ü¸®ÀÚ ÆäÀÌÁö¿¡ ¹İ¿µ
+8_1. ìƒì„±ëœ ëª¨ë¸ì„ ê´€ë¦¬ì í˜ì´ì§€ì— ë°˜ì˜
 [app\admin.py]
 from django.contrib import admin
 from .models import Post
@@ -66,47 +66,47 @@ admin.site.register(Student)
 # Register your models here.
 
 
-9. DB»ı¼º ¹× ¹İ¿µ
-»ı¼º: manage.py makemigrations app
-¹İ¿µ: manage.py migrate
+9. DBìƒì„± ë° ë°˜ì˜
+ìƒì„±: manage.py makemigrations app
+ë°˜ì˜: manage.py migrate
 
 
-10. ÅÛÇÃ¸´ Ãâ·Â(hello django Ãâ·Â)
+10. í…œí”Œë¦¿ ì¶œë ¥(hello django ì¶œë ¥)
 [sec\urls]
 from django.conf.urls import url, include
 url(r'',include('secapp.urls')),
 
 
-10_1. ÅÛÇÃ¸´ »ı¼º(html)
-[D:\20506_ÀÌ¼­¿µ\Python\second\secapp\templates\secapp\home.html »ı¼º]
+10_1. í…œí”Œë¦¿ ìƒì„±(html)
+[D:\20506_ì´ì„œì˜\Python\second\secapp\templates\secapp\home.html ìƒì„±]
 
-10_2. url »ı¼º
-[app\urls »ı¼º]
-// . -> ÇöÀç À§Ä¡
+10_2. url ìƒì„±
+[app\urls ìƒì„±]
+// . -> í˜„ì¬ ìœ„ì¹˜
 from django.conf.urls import url
 from . import views
-urlpattern = [
+urlpatterns = [
 	url(r'^$', views.post_list, name='post_list'),
 ]
 
 
-10_3. view·Î Ã³¸®
+10_3. viewë¡œ ì²˜ë¦¬
 
 
-11. ¼­¹ö µ¥ÀÌÅÍ¸¦ ÅÛÇÃ¸´ Ãâ·Â (ÅÛÇÃ¸´ º¯¼ö, ÅÛÇÃ¸´ ÄÚµå)
-ÅÛÇÃ¸´ º¯¼ö: {{}}
-ÅÛÇÃ¸´ ÄÚµå: {% for in %} {%endfor%}
+11. ì„œë²„ ë°ì´í„°ë¥¼ í…œí”Œë¦¿ ì¶œë ¥ (í…œí”Œë¦¿ ë³€ìˆ˜, í…œí”Œë¦¿ ì½”ë“œ)
+í…œí”Œë¦¿ ë³€ìˆ˜: {{}}
+í…œí”Œë¦¿ ì½”ë“œ: {% for in %} {%endfor%}
 
-11_1. views µ¥ÀÌÅÍ¸¦ °¡°ø
-[D:\20506_ÀÌ¼­¿µ\Python\second\secapp\views.py]
+11_1. views ë°ì´í„°ë¥¼ ê°€ê³µ
+[D:\20506_ì´ì„œì˜\Python\second\secapp\views.py]
 from django.shortcuts import render
 from .models import Post
 
 # Create your views here.
 def post_list(request):
-    posts=Post.objects.all() #¼­¹ö µ¥ÀÌÅÍ¸¦ Àü¼Û
-    return render(request, 'app/home.html',
+    posts=Post.objects.all() #ì„œë²„ ë°ì´í„°ë¥¼ ì „ì†¡
+    return render(request, 'secapp/home.html',
                   {'posts':posts})
 
 
-11_2. ÅÛÇÃ¸´¿¡¼­ Ãâ·Â
+11_2. í…œí”Œë¦¿ì—ì„œ ì¶œë ¥
