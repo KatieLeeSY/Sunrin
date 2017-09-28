@@ -110,3 +110,6 @@ def post_list(request):
 
 
 11_2. 템플릿에서 출력
+post 게시물 1개 추가 ex.test01
+localhost:8000/
+Hello Django 나옴
