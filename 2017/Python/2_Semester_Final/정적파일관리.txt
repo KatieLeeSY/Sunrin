@@ -1,0 +1,21 @@
+정적 파일 관리
+
+1. css, img 파일을 이요해서 웹페이지 개발
+
+2. css, img 경로 관리가 핵심
+
+3. 경로 지정
+templates 생성
+앱폴더\templates폴더\앱템플릿폴더
+ex)firstapp\templates\firstapp\home.html
+
+4. css, img 파일에 경로를 지정
+firstapp\static\firstapp\css\test.css
+firstapp\static\firstapp\img\test.css
+
+5. 템플릿 파일 작성방법
+5_1. 템플릿파일 상단에 {% load staticfiles %}
+5_2. css 파일의 경로를 지정
+<link rel='stylesheet' href="{% static 'fistapp\css\django.css'%}">
+5_3. img 파일의 경로를 지정
+<img src="{% static 'firstapp\img\django_img.jpg'%}">
