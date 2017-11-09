@@ -1,0 +1,64 @@
+//home.html
+{% load staticfiles %}
+?<html>
+<head>
+<meta charset='utf-8'>
+<link href = "{% static 'firstapp\css\django_css.css'%}">
+
+<style>
+/*@import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);*/
+* {font-family: 'Nanum Brush Script', serif;}
+</style>
+<body>
+hello django
+<b><p><a href = '/second'>두번째 페이지로 이동</a></p></b>
+<img src="{% static 'firstapp\img\django_img.jpg' %}">
+
+
+</body>
+</html>
+
+
+//second.html
+{% load staticfiles %}
+<!Doctype html>
+<html>
+
+<head>
+<meta charset = 'utf-8'>
+<link href = "{% static 'firstapp\css\django_css.css'%}">
+</head>
+
+<body>
+  두번째 페이지입니다.
+<b><p><a href = 'second.html'>첫번째 페이지로 이동</a></p></b>
+</body>
+
+</html>
+
+
+
+// views.py
+from django.shortcuts import render
+from .models import Post
+
+def post_list(request):
+    posts = Post.objects.all()
+    return render(request, 'firstapp\home.html', {'posts':posts})
+
+def second(request):
+    return render(request, 'firstapp\second.html')
+
+# Create your views here.
+
+
+// urls.py
+from django.conf.urls import url
+from . import views
+
+urlpatterns = [
+    url(r'^$', views.post_list, name='post_list'),
+    url(r'second/', views.second, name='second'),
+    
+]
