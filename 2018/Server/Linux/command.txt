@@ -2,10 +2,17 @@
 교과서 : 서버 구축 및 운영 p.68~70
 [3] 리눅스 서버 구축 - [2] 리눅스 기본 명령어
 
-(1) 터미널
-goto 터미널
 
-(2) 디렉터리 관련 명령어
+⑴ 터미널
+
+[root@localhost ~]#
+[계정명@호스트명 폴더명]
+
+
+⑵ 디렉터리 관련 명령어
+
+▼ 디렉터리의 경로 설정 기호와 의미
+
 /
 최상위 디렉터리 표시, 디렉터리 구분
 
@@ -18,20 +25,32 @@ goto 터미널
 ~
 사용자의 홈 디렉터리
 
-pwd
-Present Working Directory. 현재 사용 중인 디렉토리.
+ⓛcd(Change Directory)
+
+▼ cd 명령어 옵션
+
+cd .
+현재 디렉터리
+
+cd /
+최상위 디렉터리로 이동
 
 cd ..
-상단 디렉토리로 이동
+상위 디렉터리로 이동
+
+cd ~ OR cd
+사용자의 홈 디렉터리로 이동
+
+⑶ pwd(Print Working Directory)
+
+pwd
+Present Working Directory. 현재 사용 중인 디렉토리.
 
 ls
 디렉토리의 목록 확인
 
 root@localhost ~
 ~은 홈을 뜻함
-
-cd ~
-홈으로 이동
 
 clear
 화면을 깨끗하게 지워줌!
