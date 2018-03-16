@@ -71,10 +71,25 @@ clear
 man [명령어]
 manual. 명령어를 설명해줌.
 
-④ mkdir(Make Directory)
+④ mkdir(Make DIRectory)
 
 ▼ mkdir 명령어 옵션
 
+mkdir dirA
+현재 위치에서 dirA 디렉터리 생성
+
+mkdir -p dirB/dirC
+dirB와 dirC 디렉터리를 동시에 생성
+
+⑤ rmdir(ReMove DIRectory)
+
+▼ rmdir 명령어 옵션
+
+rmdir dirA
+현재 위치에 있는 dirA라는 디렉터리 삭제
+
+rmdir -p dirB/dirC
+dirC를 삭제 후 dirB 디렉터리 삭제
 
 init 0
 VM 종료
