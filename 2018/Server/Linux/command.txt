@@ -65,12 +65,6 @@ ls -R
 ls t*
 t로 시작하는 목록을 화면에 출력
 
-clear
-화면을 깨끗하게 지워줌!
-
-man [명령어]
-manual. 명령어를 설명해줌.
-
 ④ mkdir(Make DIRectory)
 
 ▼ mkdir 명령어 옵션
@@ -90,6 +84,15 @@ rmdir dirA
 
 rmdir -p dirB/dirC
 dirC를 삭제 후 dirB 디렉터리 삭제
+
+
+♣ 추가 필기
+
+clear
+화면을 깨끗하게 지워줌!
+
+man [명령어]
+manual. 명령어를 설명해줌.
 
 init 0
 VM 종료
